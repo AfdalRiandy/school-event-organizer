@@ -100,8 +100,8 @@
 
             <div class="col-xl-10 col-lg-12 col-md-9">
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
+                <div class="my-5 border-0 shadow-lg card o-hidden">
+                    <div class="p-0 card-body">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block bg-login-image">
@@ -109,14 +109,14 @@
                                 <div class="logo-wrapper">
                                     <!-- Replace with your actual logo -->
                                     <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" onerror="this.src='{{ asset('assets/img/undraw_rocket.svg') }}'; this.style.maxWidth='60%';">
-                                    <h1 class="logo-title">Event Management</h1>
-                                    <p class="logo-subtitle">Manage all your school events in one place</p>
+                                    <h1 class="logo-title">SMK N 2 Padang</h1>
+                                    <p class="logo-subtitle">Sistem Informasi Acara Sekolah</p>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="mb-4 text-gray-900 h4">Welcome Back!</h1>
                                     </div>
 
                                     @if(session('error'))
@@ -130,7 +130,7 @@
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text bg-transparent border-right-0">
+                                                    <span class="bg-transparent input-group-text border-right-0">
                                                         <i class="fas fa-user text-primary"></i>
                                                     </span>
                                                 </div>
@@ -145,7 +145,7 @@
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text bg-transparent border-right-0">
+                                                    <span class="bg-transparent input-group-text border-right-0">
                                                         <i class="fas fa-lock text-primary"></i>
                                                     </span>
                                                 </div>
@@ -163,7 +163,7 @@
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            <i class="fas fa-sign-in-alt mr-2"></i> Login
+                                            <i class="mr-2 fas fa-sign-in-alt"></i> Login
                                         </button>
                                     </form>
                                     <hr>

@@ -24,7 +24,7 @@
             align-items: center;
             justify-content: center;
             position: center;
-            padding-top: 80px;
+            padding-top: 120px;
         }
         
         .logo-wrapper {
@@ -34,7 +34,7 @@
         }
         
         .logo-wrapper img {
-            max-width: 70%;
+            max-width: 50%;
             height: auto;
         }
         
@@ -104,8 +104,8 @@
 
     <div class="container">
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
-            <div class="card-body p-0">
+        <div class="my-5 border-0 shadow-lg card o-hidden">
+            <div class="p-0 card-body">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-5 d-none d-lg-block bg-register-image">
@@ -113,21 +113,21 @@
                         <div class="logo-wrapper">
                             <!-- Replace with your actual logo -->
                             <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" onerror="this.src='{{ asset('assets/img/undraw_rocket.svg') }}'; this.style.maxWidth='60%';">
-                            <h1 class="logo-title">Event Management</h1>
-                            <p class="logo-subtitle">Join our community and participate in exciting school events</p>
+                            <h1 class="logo-title">SMK N 2 Padang</h1>
+                            <p class="logo-subtitle">Daftar sesuai dengan identitas ananda semua</p>
                         </div>
                     </div>
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create Student Account!</h1>
+                                <h1 class="mb-4 text-gray-900 h4">Create Student Account!</h1>
                             </div>
                             <form class="user" method="POST" action="{{ route('register') }}">
                                 @csrf
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text bg-transparent border-right-0">
+                                            <span class="bg-transparent input-group-text border-right-0">
                                                 <i class="fas fa-user text-primary"></i>
                                             </span>
                                         </div>
@@ -142,7 +142,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text bg-transparent border-right-0">
+                                            <span class="bg-transparent input-group-text border-right-0">
                                                 <i class="fas fa-envelope text-primary"></i>
                                             </span>
                                         </div>
@@ -157,7 +157,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text bg-transparent border-right-0">
+                                            <span class="bg-transparent input-group-text border-right-0">
                                                 <i class="fas fa-id-card text-primary"></i>
                                             </span>
                                         </div>
@@ -170,10 +170,10 @@
                                 </div>
                                 
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <div class="mb-3 col-sm-6 mb-sm-0">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text bg-transparent border-right-0">
+                                                <span class="bg-transparent input-group-text border-right-0">
                                                     <i class="fas fa-graduation-cap text-primary"></i>
                                                 </span>
                                             </div>
@@ -187,7 +187,7 @@
                                     <div class="col-sm-6">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text bg-transparent border-right-0">
+                                                <span class="bg-transparent input-group-text border-right-0">
                                                     <i class="fas fa-school text-primary"></i>
                                                 </span>
                                             </div>
@@ -201,10 +201,10 @@
                                 </div>
                                 
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <div class="mb-3 col-sm-6 mb-sm-0">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text bg-transparent border-right-0">
+                                                <span class="bg-transparent input-group-text border-right-0">
                                                     <i class="fas fa-lock text-primary"></i>
                                                 </span>
                                             </div>
@@ -218,7 +218,7 @@
                                     <div class="col-sm-6">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text bg-transparent border-right-0">
+                                                <span class="bg-transparent input-group-text border-right-0">
                                                     <i class="fas fa-lock text-primary"></i>
                                                 </span>
                                             </div>
@@ -229,7 +229,7 @@
                                 </div>
                                 
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
-                                    <i class="fas fa-user-plus mr-2"></i> Register Account
+                                    <i class="mr-2 fas fa-user-plus"></i> Register Account
                                 </button>
                             </form>
                             <hr>
