@@ -23,7 +23,7 @@ use App\Http\Controllers\Siswa\AcaraController as SiswaAcaraController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Route::get('/dashboard', function () {
@@ -54,6 +54,14 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/user/{user}/edit', [AdminUserController::class, 'edit'])->name('admin.user.edit');
     Route::put('/admin/user/{user}', [AdminUserController::class, 'update'])->name('admin.user.update');
     Route::delete('/admin/user/{user}', [AdminUserController::class, 'destroy'])->name('admin.user.destroy');
+});
+
+Route::middleware(['auth', 'role:admin'])->prefix('admin/reports')->name('admin.reports.')->group(function () {
+    Route::get('/users', [App\Http\Controllers\Admin\ReportController::class, 'users'])->name('users');
+    Route::get('/events', [App\Http\Controllers\Admin\ReportController::class, 'events'])->name('events');
+    Route::get('/registrations', [App\Http\Controllers\Admin\ReportController::class, 'registrations'])->name('registrations');
+    Route::get('/summary', [App\Http\Controllers\Admin\ReportController::class, 'summary'])->name('summary');
+    Route::get('/custom', [App\Http\Controllers\Admin\ReportController::class, 'custom'])->name('custom');
 });
 
 // Siswa routes
@@ -105,6 +113,5 @@ Route::middleware(['auth', 'role:wakil_kesiswaan'])->group(function () {
     Route::post('/wakil_kesiswaan/acara/{acara}/approve', [\App\Http\Controllers\WakilKesiswaan\AcaraApprovalController::class, 'approve'])->name('wakil_kesiswaan.acara.approve');
     Route::post('/wakil_kesiswaan/acara/{acara}/reject', [\App\Http\Controllers\WakilKesiswaan\AcaraApprovalController::class, 'reject'])->name('wakil_kesiswaan.acara.reject');
 });
-
 
 require __DIR__.'/auth.php';
