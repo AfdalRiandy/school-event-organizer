@@ -25,4 +25,20 @@ Route::middleware('auth:sanctum')->group(function () {
         return $request->user();
     });
     Route::post('/logout', [AuthController::class, 'logout']);
+    
+    // Event routes
+    Route::post('/acara', [App\Http\Controllers\Api\AcaraController::class, 'store']);
+
+    // Wakil Kesiswaan Event Approval routes
+    Route::get('/events/pending', [App\Http\Controllers\Api\AcaraApprovalController::class, 'getPendingEvents']);
+    Route::get('/events', [App\Http\Controllers\Api\AcaraApprovalController::class, 'getAllEvents']);
+    Route::post('/events/{id}/approve', [App\Http\Controllers\Api\AcaraApprovalController::class, 'approveEvent']);
+    Route::post('/events/{id}/reject', [App\Http\Controllers\Api\AcaraApprovalController::class, 'rejectEvent']);
+    
+    // Event registration routes for students
+    Route::get('/events', [App\Http\Controllers\Api\PendaftaranController::class, 'getEvents']);
+    Route::get('/events/{id}', [App\Http\Controllers\Api\PendaftaranController::class, 'getEvent']);
+    Route::get('/my-registrations', [App\Http\Controllers\Api\PendaftaranController::class, 'getMyRegistrations']);
+    Route::post('/register', [App\Http\Controllers\Api\PendaftaranController::class, 'register']);
+    Route::delete('/registrations/{id}', [App\Http\Controllers\Api\PendaftaranController::class, 'cancelRegistration']);
 });

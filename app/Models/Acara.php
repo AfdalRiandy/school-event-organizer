@@ -16,7 +16,7 @@ class Acara extends Model
         'tanggal_acara',
         'batas_pendaftaran',
         'status',
-        'panitia_id'
+        'panitia_id',
     ];
 
     public function panitia()

@@ -7,7 +7,6 @@ use App\Models\User;
 use App\Models\Acara;
 use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
-use PDF;
 
 class ReportController extends Controller
 {
